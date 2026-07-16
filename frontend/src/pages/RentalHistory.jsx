@@ -18,7 +18,7 @@ const RentalHistory = () => {
             const token = localStorage.getItem("token");
 
             const { data } = await axios.get(
-                "http://localhost:5000/api/bookings/history",
+                `${import.meta.env.VITE_API_URL}/api/bookings/history`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

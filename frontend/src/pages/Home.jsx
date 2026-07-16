@@ -20,7 +20,7 @@ const Home = () => {
         const fetchVehicles = async () => {
             try {
                 const { data } = await axios.get(
-                    "http://localhost:5000/api/vehicles"
+                    `${import.meta.env.VITE_API_URL}/api/vehicles/${id}`
                 );
 
                 setVehicles(data);

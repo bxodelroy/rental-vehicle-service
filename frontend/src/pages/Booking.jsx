@@ -19,7 +19,7 @@ const Booking = () => {
     const fetchVehicle = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/vehicles/${id}`
+          `${import.meta.env.VITE_API_URL}/api/vehicles/${id}`
         );
 
         setVehicle(data);
@@ -69,7 +69,7 @@ const Booking = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/bookings",
+        `${import.meta.env.VITE_API_URL}/api/bookings`,
         bookingData,
         {
           headers: {

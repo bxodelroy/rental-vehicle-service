@@ -32,7 +32,7 @@ const AdminDashboard = () => {
   const fetchVehicles = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/vehicles"
+        (`${import.meta.env.VITE_API_URL}/api/vehicles`)
       );
 
       setVehicles(data);
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/bookings",
+        `${import.meta.env.VITE_API_URL}/api/bookings`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/api/vehicles/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/vehicles/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -98,7 +98,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/bookings/${bookingId}/status`,
+        `${import.meta.env.VITE_API_URL}/api/bookings/${bookingId}/status`,
         { status },
         {
           headers: {
@@ -155,7 +155,7 @@ const AdminDashboard = () => {
 
       if (editingId) {
         const response = await axios.put(
-          `http://localhost:5000/api/vehicles/${editingId}`,
+          `${import.meta.env.VITE_API_URL}/api/vehicles/${editingId}`,
           formData,
           {
             headers: {
@@ -177,7 +177,7 @@ const AdminDashboard = () => {
       } else {
 
         const response = await axios.post(
-          "http://localhost:5000/api/vehicles",
+          `${import.meta.env.VITE_API_URL}/api/vehicles`,
           formData,
           {
             headers: {
