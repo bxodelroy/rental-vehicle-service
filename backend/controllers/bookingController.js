@@ -115,10 +115,12 @@ export const getMyBookings = async (req, res) => {
 
 export const cancelBooking = async (req, res) => {
     try {
+
         const booking = await Booking.findOne({
             _id: req.params.id,
             user: req.user.id,
         });
+
 
         if (!booking) {
             return res.status(404).json({
@@ -126,17 +128,23 @@ export const cancelBooking = async (req, res) => {
             });
         }
 
+
         booking.status = "Cancelled";
 
         await booking.save();
+
 
         res.json({
             message: "Booking cancelled successfully",
             booking,
         });
+
+
     } catch (error) {
+
         res.status(500).json({
             message: error.message,
         });
+
     }
 };
