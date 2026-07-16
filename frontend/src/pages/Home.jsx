@@ -20,9 +20,9 @@ const Home = () => {
         const fetchVehicles = async () => {
             try {
                 const { data } = await axios.get(
-                    `${import.meta.env.VITE_API_URL}/api/vehicles/${id}`
+                    `${import.meta.env.VITE_API_URL}/api/vehicles/`
                 );
-
+              //  console.log("API Response:", data);
                 setVehicles(data);
                 setFilteredVehicles(data);
             } catch (error) {
