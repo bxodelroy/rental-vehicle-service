@@ -30,6 +30,11 @@ RentRide is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applicat
 - Dashboard statistics
 - Toast notifications for actions
 
+### 🛠️ Admin Credentials
+
+-Email: admin@example.com
+-Password: 123456
+
 ---
 
 ## 🧰 Tech Stack
