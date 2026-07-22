@@ -35,6 +35,15 @@ RentRide is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applicat
 -Email: admin@example.com
 -Password: 123456
 
+1. Login using the Admin credentials above.
+2. The "Admin Panel" button will appear in the navigation bar.
+3. From the Admin Panel you can:
+   - Add vehicles
+   - Edit vehicles
+   - Delete vehicles
+   - Manage booking status
+   - View rental history
+
 ---
 
 ## 🧰 Tech Stack
@@ -187,7 +196,7 @@ This allows administrators to monitor completed rentals and payment information.
 
 ## 🌐 Live Demo
 
-**Frontend:** *(Add your Netlify URL here)*
+**Frontend:** https://rental-vehicle-service.netlify.app/
 
 **Backend API:** https://rental-vehicle-service.onrender.com
 
